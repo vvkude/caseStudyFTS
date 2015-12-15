@@ -1,0 +1,580 @@
+/* -----------------------------------------------------------------------------
+  BOX SIZING RESET
+  
+----------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+  ROOT ELEMENTS
+  
+----------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+html, body, section, div {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body { 
+  color: #4F0909;
+  background: green;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+    background: linear-gradient(
+    to right, 
+    #DFE249 0%, 
+    #DFE249 50%, 
+    #FF5F69 50%, 
+    #FF5F69 100%
+  );
+}
+
+/* -----------------------------------------------------------------------------
+  HEADING ELEMENTS
+  
+----------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: #DFE249;
+  font-family: "Lato", garamond, serif;
+  color: #FF5F69;
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1.invert {
+  background: #4F0909;
+  color: #FF5F69
+}
+
+h1.adjusted {
+  background: #FF5F69;
+  color: #DFE249;
+}
+
+h3 {
+  font-size: 4em;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff;
+}
+
+/* -----------------------------------------------------------------------------
+  TEXT ELEMENTS
+  
+----------------------------------------------------------------------------- */
+a {
+  color: #28aadc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00648c;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+li > a {
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------------------------------------
+  MEDIA ELEMENTS
+  
+----------------------------------------------------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Override figure defaults...
+   ...but why trust any browser to decide what default is? */
+figure { 
+    display: block;
+    margin-top: 8.25em;
+    margin-bottom: 1.125em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+/* -----------------------------------------------------------------------------
+  WRAPPER OBJECT
+  
+----------------------------------------------------------------------------- */
+.v-wrapper {
+  /*-webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s*/;
+}
+
+/* -----------------------------------------------------------------------------
+  CONTAINER OBJECTS
+  
+----------------------------------------------------------------------------- */
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px;
+}
+
+@media all and (min-width: 480px) {
+  .o-container {
+    padding: 40px 24px 0px 24px;
+  }
+}
+@media all and (min-width: 720px) {
+  .o-container {
+    padding: 0 48px;
+  }
+}
+/* -----------------------------------------------------------------------------
+  HEADER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.v-header-nav { /*will use in later iterations of site*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #67b5d1;
+}
+
+.o-header-nav__link {
+  padding: 12px;
+  color: #fff;
+}
+
+
+@media all and (min-width: 480px) {
+  .o-header__title {
+    margin: 36px;
+    font-size: 42px;
+  }
+}
+
+/* May need to add clear:both for iphones - will check */
+@media all and (max-width: 480px) {
+  *{clear:both;}
+  body{width:100%;}
+  img{max-width:100%;}
+  .o-header__title {
+    margin: 24px;
+    font-size: 18px;
+  }
+  body { 
+  color: #4F0909;
+  background: #000;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+}
+
+}
+
+
+span.f_name, span.l_name {
+  margin-top: .755em;
+  padding: 0em .125em 0em 0em;
+  color: #4F0909;
+  font-size: 2.125em;
+}
+
+span.l_name {
+  margin-top: .125em;
+  font-size: 2.775em;
+}
+
+span.highlight {
+  background: #00DCEA;
+}
+
+/* -----------------------------------------------------------------------------
+  MAIN OBJECT
+  
+----------------------------------------------------------------------------- */
+.o-main {
+  /**/
+}
+
+
+section {
+  width: 100%;
+}
+
+/* This is how I am sneaking around using tables or floats to get a split layout */
+article {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+
+/* -----------------------------------------------------------------------------
+  PANEL STYLES
+  [TODO] consider gradient with hard stop in the middle...?
+  Ha, already had to use the gradient trick...
+  
+----------------------------------------------------------------------------- */
+.split-left { /*didn't work as planned*/
+  background-color: #DFE249;
+  float: left;
+  width: 50%;
+}
+.split-right { /*didn't work as planned*/
+  background-color: #AFA1FF;
+  float: left;
+  width: 50%;
+}
+
+.v-container { /*main container for entire page*/
+  height: 40em;
+  float: left;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    #DFE249 0%, 
+    #DFE249 50%, 
+    #FF5F69 50%, 
+    #FF5F69 100%
+  );
+  border-bottom: 1em solid #FF414D;
+}
+
+.big-gap { /*mainly a styling elmeent for color separation*/
+  padding-bottom: 2.125em;
+  height: 13em;
+  float: left;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    #000 0%, 
+    #000 50%, 
+    #4F0909 50%, 
+    #4F0909 100%
+  );
+}
+
+/* -----------------------------------------------------------------------------
+  SUB-NAVIGATION OBJECT
+  
+----------------------------------------------------------------------------- */
+.v-sub-nav {
+  margin: 0 0 17px 0;
+  padding: 0;
+}
+
+.v-sub-nav__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.v-sub-nav__item {
+  margin: 0;
+  padding: 4px;
+}
+
+.v-sub-nav__link {
+  display: block;
+  margin: 0;
+  padding: 7px 27px;
+  border: solid 2px #67b5d1;
+}
+
+.v-sub-nav__link:hover,
+.v-sub-nav__item.active .o-sub-nav__link {
+  color: #fff;
+  background-color: #67b5d1;
+}
+
+@media all and (min-width: 720px) {
+  .v-sub-nav {
+    margin: 0 0 48px 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  FOOTER OBJECT
+  
+----------------------------------------------------------------------------- */
+.v-footer {
+  padding: 7px 0;
+  text-align: center;
+}
+
+@media all and (min-width: 480px) {
+  .v-footer {
+    padding: 24px 0;
+  }
+}
+@media all and (min-width: 720px) {
+  .v-footer {
+    padding: 48px 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  MENU COMPONENTS
+  
+----------------------------------------------------------------------------- */
+/**
+ * Navigational Menu
+ *
+ *
+ *
+ */
+.v-menu {
+  position: fixed;
+  z-index: 200;
+  background-color: #FF4C01;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.v-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+ * Fixed Top Menu 
+ *
+ * [TODO] Add sliding effect on scroll
+ */
+.v-menu--fixed-top {
+  vertical-align: middle;
+  width: 100%;
+  height: 7.125em;
+  text-align: center;
+  overflow-x: scroll;
+  border-bottom: 1em solid #FF5F69;
+}
+
+.v-menu--fixed-top .v-menu__items {
+  display: inline-block;
+  text-align: center;
+}
+
+.v-menu--fixed-top .v-menu__item {
+  display: inline-block;
+  line-height: 60px;
+}
+
+.v-menu--fixed-top .v-menu__link {
+  display: block;
+  padding: 1em .25em;
+  color: #fff;
+}
+
+.v-menu--fixed-top .v-menu__close {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 0 24px;
+  height: 60px;
+  line-height: 60px;
+}
+
+/**
+ * I'm so indecisive. Maybe I want to have a slide or push effect
+ * and maybe I don't! I'll leave this here just in case...
+ */
+.v-menu--fixed-top {
+  top: 0;
+  left: 0;
+/* Document scrolls wonkily when I try to do a slide out menu??? */
+  overflow: hidden;
+}
+
+
+/* -----------------------------------------------------------------------------
+  BUTTONS
+  
+----------------------------------------------------------------------------- */
+.v-buttons {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.v-button {
+  display: inline-block;
+  margin: 4px;
+  padding: 7px 17px;
+  color: #67b5d1;
+  background: none;
+  font-size: 14px;
+  border: solid 2px #67b5d1;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.v-button:focus {
+  outline: none;
+}
+
+.v-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.fixed-nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 3em;
+	padding: 7px 0px 0px 0px;
+	/* Adds shadow to the bottom of the bar */
+	-webkit-box-shadow: 0px 0px 8px 0px #000000;
+	-moz-box-shadow: 0px 0px 8px 0px #000000;
+	box-shadow: 0px 0px 8px 0px #000000;
+	/* Adds the transparent background */
+	background-color: rgba(1, 1, 1, 0.8);
+	color: rgba(1, 1, 1, 0.8);
+}
+
+.v-wrapper {
+
+}
+
+.upper-span {
+	margin: 3.4em 0 0 0;
+	background: #FFF;
+	width: 100%;
+	height: 350px;
+}
+
+.span1{
+	background:gray;
+	width:100%;
+	height:50%;
+}
+
+
+span{
+	font-family:garamond;
+	font-size:8em;
+	background:white;
+	color:blue;
+}
+
+.button{
+	/* by default, button items dont cause the cursor to change from an arrow to a pointer...
+		When on earth will that change???*/
+	cursor:pointer;
+	font-weight:bold;
+	font-family: verdana;
+	font-size:1.2em;
+	color:#FFF;
+	/*-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;*/
+	line-height:1.25em;
+	padding: 6px 20px;
+	background-color:#ccffff;
+	/* if button labels are handled dynamically by users, this line will force consistency*/
+	text-transform:uppercase;
+	/* i'd like to apply button stylings to certain links, too...so I'm 
+		removing the default color change for links as well as the underline on mouseover*/
+	text-decoration:none;
+	border: 1px solid #282727;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+
+	box-shadow:1px 3px 5px #555;
+	-moz-box-shadow:1px 3px 5px #555;
+	-webkit-box-shadow:1px 3px 5px #555;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+
+	box-shadow:1px 3px 5px #555;
+	-moz-box-shadow:1px 3px 5px #555;
+	-webkit-box-shadow:1px 3px 5px #555;
+
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(1, 1, 1, 0.8)), to(#000));
+	background: -moz-linear-gradient(rgba(1, 1, 1, 0.8), #000);
+	background: -o-linear-gradient(rgba(1, 1, 1, 0.8), #000); /*opera*/
+	background: linear-gradient(top center, rgba(1, 1, 1, 0.8), #000);
+}
+
+/* Reversing the gradient when the button is active and has focus to give users visual feedback 
+	that they are interacting with the button. Personally, I look for feedback I have clicked a 
+	button, and get a little wigged out when I don't find it*/
+.button:active, .button:focus {
+	color: black#001a00;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #282727;
+/* Gotta watch out for Google Chrome for Mac dropping those outlines around buttons for keyboard users*/
+/*	outline: none;  I could also make a 'no-focus' class that I could reuse, without affecting default button behavior*/
+	box-shadow:1px 2px 3px #666;
+	-moz-box-shadow:1px 2px 3px #666;
+	-webkit-box-shadow:1px 2px 3px #666;
+/* Gradient isn't reversing in Chrome or Safari...checking dev tool pane */
+/* I've tried setting the gradients to primary colors, I think this is specific to mac chrome*/
+	background: -webkit-gradient(linear, 0 0, 100% 0, from(#A69520), to (#FFF089));
+	background: -moz-linear-gradient(#A69520, #FFF089);
+	background: -o-linear-gradient(#A69520, #FFF089);rgba(1, 1, 1, 0.8)
+	background: linear-gradient(left center, #A69520, #FFF089);
+}
+/* There are several ways to reverse the gradient. The easiest method I have found to do it 
+	consistently across differenct browsers is to simply swap the colors for each browser*/
+
+input.button {
+	/* I have to either make link elements slightly larger or button items slightly smaller for consistency*/
+	/* both bottons and links are 37px high in Chrome and Safari with links 1.25em and buttons 1.22em*/
+	line-height:1.22em;
+}
+
+.button-nofocus{ /*maybe I shouldn't do this if I don't give users some feedback that they pushed a button */
+	outline: none;
+}

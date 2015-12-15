@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Case Study of TerminalPop for Fresh Tilled Soil">
+    <meta name="author" content="Vik Kudesia">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- [TODO] Add og:_____ meta -->
+    <title>Vikrant Kudesia</title>
+
+    <!-- CSS -->
+    <link href='http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/styles.css' rel="stylesheet" type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <!-- Something needs to be done for IE. Either Modernizr or CSSPIE or conditional comments - SOMETHING -->    
+    <!-- [TODO] Add ARIA roles -->   
+</head>
+<body>
+<!-- menus -->
+<nav id="v-menu--fixed-top" class="v-menu v-menu--fixed-top">
+  
+  <span class = "f_name">Vikrant</span> <span class="l_name">Kudesia</span>
+  <!-- [TODO] Make an actual menu -->
+  <ul class="v-menu__items">
+    <li class="v-menu__item"><a href="mailto:vvkudesia@gmail.com?Subject=Hi%hi" target="_top" class="v-menu__link">Get In Touch!</a></li>
+  </ul> <!-- /ul c-menu__items -->
+</nav><!-- /c-menu--slide-top -->
+
+<main class="v-content">
+    
+<div class = "big-gap"></div>
+<section class="container">
+
+  <!-- normally, I would avoid mixing styling like this BUT I really want to 
+       experiment with controling the gap widths and colors versus the body's color-->
+
+  <!-- The problem with defining the vertical split the way I have is that 
+       the height isn't explictly set. However, the point is to make something
+       masonry-like without javascript or jquery, so I must relinquish control.
+
+       I really want my dad to be able to load up my site on his 2002 compaq-->
+
+
+  <div class="v-container">
+    <article>
+      <h1>Client: TerminalPop...</h1>
+      <!-- depending on document flow, some paragraph items need to stay OUT of the figure tags -->
+      <p>It's 4:45 PM on a Friday and I know I am going to spend my weekend remoting into a mail server than has completely combusted. Google searches are pulling up Microsoft Knowledgebase articles from 2007 that emitting the words, "Support has ended."</span>
+      <p>Am I that bad at googling? How is it possible? Scraping through forums is equally fruitfuless. I cannot possibly tell if the mail server's backup is running...I am completely unsure of how to check parameters for Carbon Copy Cloner for OS X Mountain Lion or if they will apply to Snow Leopard which, somehow, is still running on several machines.</p>
+      <p> I get on slack, I get on jabber, I email and I text my colleagues...we are all in the same boat. We just can't find what we need.</p>
+    </article>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_notebook002.jpg" alt="an engineer's notebook">
+      </figure>
+    <article>
+      <h1 class="invert">The Answer is in the Community</h1>
+      <p>Every engineer and field tech I know has a notebook or two like the one above. We tear pages out, we scrawl on them what syslog command found a hardware failure and we toss them when we think they are useless. We share with eachother what we think will be useful. Or, we warn eachother that we just completely annihilated our machines by typing something into our terminals without researching enough. We find new things in the field - more goes into the notebook. Apple updates something - pages become useless. Apple updates something again and, suddenly, that page you threw away is suddenly the only place you can accurately find that information for months, until knowledgebase articles are updated online and people stop arguing on forums.</p>
+    </article>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_max_001.jpg" alt="Max the remote technician">
+      </figure>
+    <article>
+      <h1>The Challenge</h1>
+      <p>Finding accurate and viable information on the internet efficiently while under pressure is an arduous task for <span class="highlight">anyone.</span> Add to this the pressure that your job, and the job of others, hangs in the balance of your hurried scouring of forums and online vendor resources, and one can imagine that there aren't many other instances where there is such an emphasis on acquiring very specific strings of data as the technical support role.</p>
+      <p>IT Consultants, Network Engineers, On-site and Remote Technical Support professionals alike can relate to the feeling: the joy of finding what you think is a clean solution to the issue you are experiencing...followed by the despondence of realizing the article is from seven years ago and completely invalid.</p>
+      <p>I discussed this issue with some of my colleagues to try and understand why we all had these tattered notebooks - were we doing it to ourselves?. 
+    </article>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_alfredo_001.jpg" alt="alfredo onsite technician">
+      </figure>
+    <article>
+      <h1 class = "invert">Understanding the Situation</h3>
+      <p>Often, an Apple technician carries the lightest laptop possible - a Macbook Air. Cables, power bricks, adapters, and driver sets add up to a heavy bag.</p> 
+      <p>My colleagues remarked very shrewdly that, as a technician, you thread many more processes at a time and initiate more threads per hour than the average user. The data from our device management framework shows that it is common for an onsite technician's machine to be at 110% processor capacity for an hour at a time. After this, root memory issues begin to appear as memory pressure raises leading, ultimately, to failure.</p>
+      <p>Furthermore, advances in web technology and load balancing of server resources to the client is actually detrimental to the onsite technician. Specifically, the graphics acceleration found in Google Chrome and Safari could utilize more resources than one would like while visiting certain websites. Having your machine crash while remotely logged in to a server that is on the brink of imploding, itself, is stressful.</p> 
+      <p>I interviewed two of my colleagues and mapped their user experiences below.</p> 
+    </article>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_sue002.jpg" alt="Sue's User Experience">
+      </figure>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_john002.jpg" alt="John's User Experience">
+    </figure>
+
+    <article>
+      <h1 class = "adjusted">The Solution</h1>
+      <p>I propose a lightweight, streamlined application called TerminalPop that simply tells you what you <span class="highlight">pop in the terminal.</span> </p> Most of the overhead processing will be performed by the server, and the site will be serving mostly text. There is a huge opportunity here for a self-sustaining community that is built to share their experiences and will not teach through scolding or admonition, as I have seen on other forum-based sites.</p>
+      <p>The information architecture hinges on treating this information like any other tangible object. When we go to a forum, we see what date the forum is posted, but we don't necessarily know when the information, itself, was published.</p>
+      <p>There are times, as a tech, that you are looking for something in a very granular way - you need to know if Carbon Copy Cloner's access rights are the same default settings for Snow Leopard as for Mountain Lion (they aren't). Other times, you have gone through your typical troubleshooting steps and you are looking for new avenues to explore.</p>
+      <p>If we treat the information the same as say, a book, we can thoroughly own, search and share these objects. We can know immediately when a bit of information was published and what timeframe it pertains to. If the metadata is in place, we can make this information tangible. Users can write articles about the "books" and explain their own experience with the information, thereby giving the technical data much-needed context.</p>
+    </article>
+      <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_crudeWireframe001.jpg" alt="Preliminary wireframe sketch">
+      </figure>
+    <article>
+      <h1 class="invert">Prototyping</h1>
+      <p>Care needs to be taken when contemplating how database objects are exposed to the front-end. In enterprise environments, an application that makes too many requests per minute may get locked out of the firewall. Conversely, too much load on a technician's machine may ruin the tech's entire week.</p>
+      <p>The original concept was to split the application between those who consume the data and those who create the data - to "Get Help",  "Give Help" or "For Techs" and "For Contributors". Well, the techs <span="highlight">are</span> the contributors. Further, after talking to a friend of mine in the tech world, she pointed out that the last thing she wants to do when she is goes to a website is to decide "who it's for." So, in understanding that I cannot be too attached to my own ideas, I scrapped the headings on the napkin below.
+    </article>
+    <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_napkinWireframe001.jpg" alt="Preliminary napkin sketch">
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_NapkinWireframe002.jpg" alt="Napkin sketch for search page">
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_notebook001.jpg" alt="Data encapsulation sketch">
+    </figure>
+    <div class="big-gap"><h1>Clickable Wireframes</h1></div>
+      <figure>
+        <p>The ideal user journey is outlined below. Users may be in a dire situation when they are searching for answers and every minute counts.</p>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/ia_service_model_vvk.jpg" alt="Data encapsulation sketch">
+
+      </figure>
+    <figure>
+      <p>In the prototype application below, users have access to the most important aspect of the site - the search bar - on every page at full width of the parent span.</p>
+      <p>In addition to this, a gridded layout displays articles added on those days, so they can search for the most recent additions, then refine their search as needed</p>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/screenshot001.png">
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/screenshot002.png">
+        <p>Users arrive on a comprehensive search/ browsing panel. Clicking the checkboxes or quick links to the left narrows the search results</p>
+    </figure>
+    <article>
+    </article>
+    <figure>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/screenshot003.png">
+        <p>That's what you'd pop in the terminal to flush the multicast DNS for OS X 10.10.3...but not 10.10.4</p>
+        <img src ="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/screenshot004.png">
+        <p>Ultimately, a user will be able to contact an expert during their avialable time slots to ask more specific questions.</p>
+    </figure>
+    <article>
+      <h1 class ="invert">The Code...and Problems with the Code</h3>
+      <p>Maintain most of the logic on the server end opens up myriad possibilities...and also opportunities for massive security vulnerabilites. Essentially, users will be able to upload and store strings of code as independent objects. The risk for this code being executed on the server end is high, as well as frame-busting vulnerabilities. Each form element must be carefully sanitized before being allowed into the database.</p>
+      <p>This functionality should be handled by a separate "dispatch" function that checks the input for allowed strings</p>
+    </article>
+     <figure>
+        <img src="http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/casestudy_models001.jpg" alt="Sketching Out Model Classes">
+    </figure>
+  </div><!-- /v-container-->
+</section>
+</main><!-- /v-content -->
+<!-- If there were javascript, it'd be down here for faster page load -->
+</body>
+</html>
+                
