@@ -27,7 +27,7 @@ html, body, section, div {
 
 body { 
   color: #4F0909;
-  background: #FF5F69;
+  background: #fff;
   font-family: "Lato", Helvetica, sans-serif;
   font-size: 1.25em;
   line-height: 150%;
@@ -54,9 +54,9 @@ h3,
 h4,
 h5,
 h6 {
-  background: #DFE249;
+  background: #fff;
   font-family: "Lato", garamond, serif;
-  color: #FF5F69;
+  color: #000;
   font-size: 4em;
   font-weight: 300;
   line-height: 1.2;
@@ -113,8 +113,8 @@ li > a {
 
 p {
   margin: auto;
-  text-align: justify center;
-  text-justify: inter-word;
+  text-align: left;
+  padding-bottom: 2em;
   width: 70%;
 }
 
@@ -200,7 +200,7 @@ article {
 span.f_name, span.l_name {
   margin-top: .755em;
   padding: 0em .125em 0em 0em;
-  color: #4F0909;
+  color: #fff;
   font-size: 2.125em;
 }
 
@@ -250,14 +250,8 @@ section {
   height: 40em;
   float: left; /*gotta get rid of this float*/
   width: 100%;
-  background: linear-gradient(
-    to right, 
-    #DFE249 0%, 
-    #DFE249 50%, 
-    #FF5F69 50%, 
-    #FF5F69 100%
-  );
-  border-bottom: 1.125em solid #FF414D;
+  background: #fff;
+  /*border-bottom: 1.125em solid #FF414D;*/
 }
 
 .big-gap { /*mainly a styling elmeent for color separation*/
@@ -357,7 +351,7 @@ section {
 .v-menu {
   position: fixed;
   z-index: 200;
-  background-color: #FF4C01;
+  background-color: #4F0909;
   -webkit-transition: -webkit-transform 0.3s;
           transition: transform 0.3s;
 }
