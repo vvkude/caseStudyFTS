@@ -58,15 +58,20 @@ h6 {
   background: #fff;
   color: #000;
   font-size: 5em;
-  font-weight: 400;
+  font-family: "Oswald", helvetica, sans-serif;
+  font-weight: 300;
   line-height: 1.2;
 }
 
-h2, h3 { 
-  color: #FF5F69;
+h1 {
+  font-weight: 400;
+  font-family: "Inconsolata", monospace, serif;
+  }
+
+h2 { 
+  color: #fff;
+  background: #4F0909;
   font-size: 3.5em;
-  font-family: "Oswald", helvetica, sans-serif;
-  font-weight: 300;
   }
 
 
@@ -77,15 +82,14 @@ h2.minor {
 
 h2.invert {
   background: #4F0909;
-  color: #FF5F69;
 }
 
 h2.adjusted {
   background: #DFE249;
-  color: #FF5F69;
 }
 
 h3 {
+  color: #4F0909;
   font-size: 2.5em;
 }
 
@@ -123,8 +127,13 @@ li > a {
 p {
   margin: auto;
   text-align: left;
+  text-indent: 1em;
   padding-bottom: 2em;
   width: 70%;
+}
+
+span.pop {
+  font-family: "Lato";
 }
 
 span.f_name, span.l_name {
@@ -156,10 +165,16 @@ img {
 /* Override figure defaults...
    ...but why trust any browser to decide what default is? */
 figure { 
-    margin-top: 8.25em;
+    margin-top: 1.25em;
     margin-bottom: 1.125em;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+figcaption {
+  font-family: "Oswald", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 figure > p {
