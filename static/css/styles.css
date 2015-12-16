@@ -29,7 +29,7 @@ body {
   color: #4F0909;
   background: green;
   font-family: "Lato", Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 150%;
   text-align: center;
     background: linear-gradient(
@@ -45,6 +45,9 @@ body {
   HEADING ELEMENTS
   
 ----------------------------------------------------------------------------- */
+/* Screen readers view H1 elements as top-level headings...so....
+   we should use H1 elments as top-level headings only */
+
 h1,
 h2,
 h3,
@@ -59,12 +62,13 @@ h6 {
   line-height: 1.2;
 }
 
-h1.invert {
+
+h2.invert {
   background: #4F0909;
   color: #FF5F69
 }
 
-h1.adjusted {
+h2.adjusted {
   background: #FF5F69;
   color: #DFE249;
 }
@@ -103,6 +107,10 @@ li > a {
   text-decoration: underline;
 }
 
+p {
+  text-align: justify center;
+}
+
 /* -----------------------------------------------------------------------------
   MEDIA ELEMENTS
   
@@ -115,7 +123,6 @@ img {
 /* Override figure defaults...
    ...but why trust any browser to decide what default is? */
 figure { 
-    display: block;
     margin-top: 8.25em;
     margin-bottom: 1.125em;
     margin-left: 40px;
@@ -125,10 +132,10 @@ figure {
   WRAPPER OBJECT
   
 ----------------------------------------------------------------------------- */
-.v-wrapper {
-  /*-webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s*/;
-}
+/*.v-wrapper {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s
+}*/
 
 /* -----------------------------------------------------------------------------
   CONTAINER OBJECTS
@@ -172,35 +179,6 @@ figure {
   color: #fff;
 }
 
-
-@media all and (min-width: 480px) {
-  .o-header__title {
-    margin: 36px;
-    font-size: 42px;
-  }
-}
-
-/* May need to add clear:both for iphones - will check */
-@media all and (max-width: 480px) {
-  *{clear:both;}
-  body{width:100%;}
-  img{max-width:100%;}
-  .o-header__title {
-    margin: 24px;
-    font-size: 18px;
-  }
-  body { 
-  color: #4F0909;
-  background: #000;
-  font-family: "Lato", Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 100%;
-  text-align: center;
-}
-
-}
-
-
 span.f_name, span.l_name {
   margin-top: .755em;
   padding: 0em .125em 0em 0em;
@@ -214,7 +192,7 @@ span.l_name {
 }
 
 span.highlight {
-  background: #00DCEA;
+  background: #51FFCE;
 }
 
 /* -----------------------------------------------------------------------------
@@ -230,15 +208,7 @@ section {
   width: 100%;
 }
 
-/* This is how I am sneaking around using tables or floats to get a split layout */
-article {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  padding: 1rem;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
+
 
 
 /* -----------------------------------------------------------------------------
@@ -258,9 +228,9 @@ article {
   width: 50%;
 }
 
-.v-container { /*main container for entire page*/
+.v-container { /*everything is stuffed into this 40em container*/
   height: 40em;
-  float: left;
+  float: left; /*gotta get rid of this float*/
   width: 100%;
   background: linear-gradient(
     to right, 
@@ -269,7 +239,7 @@ article {
     #FF5F69 50%, 
     #FF5F69 100%
   );
-  border-bottom: 1em solid #FF414D;
+  border-bottom: 1.125em solid #FF414D;
 }
 
 .big-gap { /*mainly a styling elmeent for color separation*/
@@ -389,7 +359,7 @@ article {
 .v-menu--fixed-top {
   vertical-align: middle;
   width: 100%;
-  height: 7.125em;
+  height: 5.125em;
   text-align: center;
   overflow-x: scroll;
   border-bottom: 1em solid #FF5F69;
@@ -482,10 +452,6 @@ article {
 	color: rgba(1, 1, 1, 0.8);
 }
 
-.v-wrapper {
-
-}
-
 .upper-span {
 	margin: 3.4em 0 0 0;
 	background: #FFF;
@@ -497,14 +463,6 @@ article {
 	background:gray;
 	width:100%;
 	height:50%;
-}
-
-
-span{
-	font-family:garamond;
-	font-size:8em;
-	background:white;
-	color:blue;
 }
 
 .button{
@@ -577,4 +535,19 @@ input.button {
 
 .button-nofocus{ /*maybe I shouldn't do this if I don't give users some feedback that they pushed a button */
 	outline: none;
+}
+
+/**
+ * Needs device sniffing or separate style sheets
+ * For now, shrinking everything down should 
+ * suffice, as hard heights are hardly specified
+ *
+ **/
+
+@media all and (max-device-width:320px) {
+  body {
+    font-size: 1em;
+    color: black;
+    }
+    h1, h2, h2.invert, h2.adjusted {font-size:1.125em;}
 }
