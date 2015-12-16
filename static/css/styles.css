@@ -31,7 +31,7 @@ body {
   font-family: "Lato", Helvetica, sans-serif;
   font-size: 1.25em;
   line-height: 150%;
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
     /*background: linear-gradient(
     to right, 
@@ -46,8 +46,8 @@ body {
   HEADING ELEMENTS
   
 ----------------------------------------------------------------------------- */
-/* Screen readers view H1 elements as top-level headings...so....
-   we should use H1 elments as top-level headings only */
+/* Screen readers view h1 elements as top-level headings...so....
+   we should use h1 elments as top-level headings only */
 
 h1,
 h2,
