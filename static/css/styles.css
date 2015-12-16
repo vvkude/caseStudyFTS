@@ -27,18 +27,18 @@ html, body, section, div {
 
 body { 
   color: #4F0909;
-  background: green;
+  background: #FF5F69;
   font-family: "Lato", Helvetica, sans-serif;
   font-size: 1.25em;
   line-height: 150%;
   text-align: center;
-    background: linear-gradient(
+    /*background: linear-gradient(
     to right, 
     #DFE249 0%, 
     #DFE249 50%, 
     #FF5F69 50%, 
     #FF5F69 100%
-  );
+  );*/
 }
 
 /* -----------------------------------------------------------------------------
@@ -69,8 +69,8 @@ h2.invert {
 }
 
 h2.adjusted {
-  background: #FF5F69;
-  color: #DFE249;
+  background: #DFE249;
+  color: #FF5F69;
 }
 
 h3 {
@@ -78,6 +78,10 @@ h3 {
   font-weight: 400;
   line-height: 1.7;
   color: #fff;
+}
+
+h1:first-of-type {
+  padding-top: 1em;
 }
 
 /* -----------------------------------------------------------------------------
@@ -108,7 +112,10 @@ li > a {
 }
 
 p {
+  margin: auto;
   text-align: justify center;
+  text-justify: inter-word;
+  width: 70%;
 }
 
 /* -----------------------------------------------------------------------------
@@ -128,6 +135,17 @@ figure {
     margin-left: 40px;
     margin-right: 40px;
 }
+
+/* This is how I am sneaking around using tables or floats to get a split layout */
+article {
+  position: relative;
+  /*padding: 1rem;*/
+  text-align: center;
+  /*transform: translate(-50%, -50%)*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+}
+
 /* -----------------------------------------------------------------------------
   WRAPPER OBJECT
   
@@ -549,5 +567,5 @@ input.button {
     font-size: 1em;
     color: black;
     }
-    h1, h2, h2.invert, h2.adjusted {font-size:1.125em;}
+    h1, h2, h2.invert, h2.adjusted {font-size:1.25em;}
 }

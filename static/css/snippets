@@ -1,0 +1,29 @@
+www.artbreakdown.com.cdn179.raxcdn.com
+
+http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/index.html
+
+http://4b4a2599734467fbd9a6-8f5ef9923118a4674e48eb8d15958485.r53.cf2.rackcdn.com/index.html
+
+http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/index.html
+
+https://github.com/vvkude/caseStudyFTS
+
+/* This is how I am sneaking around using tables or floats to get a split layout */
+article {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  /*padding: 1rem;*/
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+  background: linear-gradient(
+    to right, 
+    #DFE249 0%, 
+    #DFE249 50%, 
+    #FF5F69 50%, 
+    #FF5F69 100%
+  );
+
+http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/index.html
