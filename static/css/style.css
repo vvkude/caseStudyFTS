@@ -95,6 +95,7 @@ h3 {
   font-size: 2.5em;
 }
 
+/* [TODO] add this to regular h1*/
 h1:first-of-type {
   padding-top: .5em;
 }
@@ -174,7 +175,6 @@ figure {
 }
 
 figcaption {
-  color: #000;
   font-family: "Oswald", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1em;
@@ -284,6 +284,20 @@ section {
   width: 100%;
   background: #fff;
   /*border-bottom: 1.125em solid #FF414D;*/
+}
+
+.big-gap { /*mainly a styling elmeent for color separation*/
+  padding-bottom: 2.125em;
+  height: 13em;
+  float: left;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    #000 0%, 
+    #000 50%, 
+    #4F0909 50%, 
+    #4F0909 100%
+  );
 }
 
 /* -----------------------------------------------------------------------------
