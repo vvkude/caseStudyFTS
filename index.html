@@ -13,8 +13,9 @@
     <title>Vikrant Kudesia</title>
 
     <!-- CSS -->
-    <link href="static/css/styles.css" rel='stylesheet' type='text/css'>
+    <link href="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/styles.css" rel='stylesheet' type='text/css'>
     <!-- [TODO] use @fontface -->
+    <!-- [TODO] remove weights that are not in use -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
@@ -40,9 +41,7 @@
   <!-- normally, I would avoid mixing styling like this BUT I really want to 
        experiment with controling the gap widths and colors versus the body's color-->
 
-  <!-- The problem with defining the vertical split the way I have is that 
-       the height isn't explictly set. However, the point is to make something
-       masonry-like without javascript or jquery, so I must relinquish control..-->
+  <!-- certain figures left out of articles for testing of child-selectors in the css-->
 
 
   <div class="v-container">
@@ -67,7 +66,7 @@
     </article>
       <figure>
         <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_max_001.jpg" alt="Max the remote technician">
-        <figcaption>[above] Persona: Max, Remote Technical Support Engineer</figcation>
+        <figcaption>[above] Persona: Max, a Remote Technical Support Engineer</figcation>
       </figure>
     <article>
       <h2>The Challenge</h2>
@@ -76,21 +75,22 @@
     </article>
       <figure>
         <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_alfredo_001.jpg" alt="alfredo onsite technician">
+        <figcaption>[above] Persona: John, an On-Site Technical Support Engineer</figcation>
       </figure>
     <article>
       <h2 class = "invert">Understanding the Situation</h2>
       <p>The first logical step was to discuss the problem with my colleagues and conceptualize possible solutions. Through these conversations, I began drafting functional requirements for an application that aimed support us in the field.</p>
       <p>Often, an Apple technician carries the lightest laptop possible - a Macbook Air. Cables, power bricks, and adapters add up to a heavy bag. These machines typically have smaller hard drives and less RAM than their stronger, and heavier, counterparts.</p> 
-      <p>My colleagues remarked that, as a technician, you run more concurrent processes and initiate more threads per hour than the average user. Data from our device management framework shows that it is common for an onsite technician's machine run at <span class="highlight">110% processor capacity for two hours at a time</span>. After this, root memory issues begin to appear as memory pressure rises leading, ultimately, to failure.</p>
+      <p>My colleagues remarked that, as a technician, you run more concurrent processes and initiate more threads per hour than the average user. Data from our device management framework shows that it is common for an onsite technician's machine run at <span class="highlight">110% processor capacity for two hours at a time.</span> After this, root memory issues begin to appear as memory pressure rises leading, ultimately, to failure.</p>
       <p>Furthermore, advances in web technology and offsetting server load to the client has been detrimental to the onsite technician. Specifically, the graphics acceleration found in Google Chrome and Safari can utilize more resources than one would like while visiting certain websites. Having your machine crash while remotely logged in to a server that is <span class="highlight">itself</span> on the brink of failure is a frightening situation to be in.</p>  
     </article>
       <figure>
         <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_sue002.jpg" width="1200px" alt="Sue's User Experience">
-        <figcaption>[above] User Experience Map for Sue, Remote Support Technician</figcaption>
+        <figcaption>[above] Sue's struggle with the status quo</figcaption>
       </figure>
       <figure>
         <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_john002.jpg" width="1200px" alt="John's User Experience">
-        <figcaption>[above] User Experience Map for Sue, On-Site Support Technician</figcaption>
+        <figcaption>[above] User experience map for John, an On-Site Support Technician</figcaption>
       </figure>
     <article>
       <h2>The Solution</h2>
@@ -101,6 +101,7 @@
     </article>
       <figure>
         <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_crudeWireframe001.jpg" width="1200px" alt="Preliminary wireframe sketch">
+        <figcaption>[above] Preliminary sketches</figcaption>
       </figure>
     <article>
       <h2 class="invert">Prototyping</h2>
@@ -108,49 +109,48 @@
       <p>The original concept was to split the application between those who consume the data and those who create the data - to "Get Help" or "Give Help". After talking to a friend of mine in the tech world, she pointed out that the last thing she wants to do when she goes to a website is to decide who the information is for. I cannot be too attached to my own ideas, and I have to analyze what the real <span class="highlight">objective</span> of the application is. It is not to display a string of characters, it is to <span class="highlight">help people troubleshoot.</span>
     </article>
     <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_napkinWireframe001.jpg" alt="Preliminary napkin sketch">
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_NapkinWireframe002.jpg" alt="Napkin sketch for search page">
-        <figcaption>[above] huh?</figcaption>
+      <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_napkinWireframe001.jpg" alt="Preliminary napkin sketch">
+      <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_NapkinWireframe002.jpg" alt="Napkin sketch for search page">
+        <figcaption>[above] Napkin sketches</figcaption>
     </figure>
     <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_notebook001.jpg" alt="Data encapsulation sketch">
-        <figcaption>[above] huh?</figcaption>
-    </figure>
-    <div class="big-gap"><h2>Clickable Wireframes</h2></div>
-      
-        <p>The ideal user journey is outlined below. Users may be in a dire situation when they are searching for answers and every minute counts.</p>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/ia_service_model_vvk.jpg" alt="Data encapsulation sketch">
-
-      
-      <p>In the prototype application below, users have access to the most important aspect of the site - the search bar - on every page at full width of the parent span.</p>
-      <p>In addition, a gridded layout displays articles added on those days, so they can search for the most recent additions, then refine their search as needed</p>
-    <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot001.png" alt="clickable wireframe screenshot 1 Home page">
-        <p>[above] The index page prominently features a large search bar. Users also have access to the most recent articles by clicking on the date in the gridden calendar layout</p>
+      <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_notebook001.jpg" alt="Data encapsulation sketch">
+        <figcaption>[above] Requirements Analysis</figcaption>
     </figure>
     <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot002.png" alt="clickable wireframe screenshot 2 Browsing and Searching">
-        <p>Users arrive at a comprehensive search and browsing panel. Clicking the checkboxes or quick links to the left narrows the search results</p>
+      <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/ia_service_model_vvk.jpg" alt="An ideal user journey">
+        <figcaption>[above] An ideal user journey through the TerminalPOP application</figcaption>
+    </figure>
+    <article>
+    <h2>Screenshots</h2> 
+    <figure>
+      <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot001.png" width="1200" alt="clickable wireframe screenshot 1 Home page">
+        <figcaption>[above] Users have access to a large search bar to search for specific information. In addition, users can access the most current articles and commands through the calendar grid</figcaption>
+    </figure>
+    <figure>
+        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot002.png" width="1200" alt="clickable wireframe screenshot 2 Browsing and Searching">
+        <figcaption>[above] Users arrive at a comprehensive search and browsing panel. Clicking the checkboxes or quick links to the left narrows the search results</figcaption>
     </figure>
     
     
     <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot003.png" alt="clickable wireframe screenshot 3 Finding and Article">
-        <p>That's what you'd pop in the terminal to flush the multicast DNS for OS X 10.10.3...but not 10.10.4</p>
+        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot003.png" width="1200" alt="clickable wireframe screenshot 3 Finding and Article">
+        <figcaption>[above] What to pop in the terminal to flush the multicast DNS for OS X 10.10.3...but not 10.10.4!</figcaption>
     </figure>
     <figure>
-        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot004.png" alt="clickable wireframe screenshot Reading and Article">
-        <p>Ultimately, a user will be able to contact an expert during their available time slots to ask more specific questions.</p>
+        <img src ="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/screenshot004.png" width="1200" alt="clickable wireframe screenshot Reading and Article">
+        <figcaption>[above] Room for application growth - perhaps added functionality for users to request personal sessions with experts?</figcaption>
     </figure>
-    
-    
+    <article>
       <h2 class ="invert">The Code...and its Problems</h2>
-      <p>Maintaining most of the logic on the server end opens up myriad possibilities for usability...and also opportunities for massive security vulnerabilites. Essentially, users will be able to upload and store strings of code as independent objects. However, this also opens up the possibility of malicious users executing their own code on the server.</p>
+      <p>Maintaining most of the logic on the server end opens up myriad possibilities for usability...and also opportunities for <span class="highlight">massive security vulnerabilites.</span> Essentially, users will be able to upload and store strings of code as independent objects. However, this also opens up the possibility of malicious users executing their own code on the server.</p>
       <p>The information architecture should focus solely on the application's objective - to help people troubleshoot!</p>
     
      <figure>
         <img src="http://5c9c7a7670ff5ed749b3-40e2f97543bf7fa749a7fe9213856f03.r99.cf2.rackcdn.com/casestudy_models001.jpg" alt="Sketching Out Model Classes">
+          <figcaption>[above] Preliminary sketches for model classes and foreign keys</figcaption>
     </figure>
+    <article>
   </div><!-- /v-container-->
 </section>
 </main><!-- /v-content -->
